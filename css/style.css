@@ -1,3 +1,91 @@
-@media(max-width:320px)
+/* @media(max-width:320px)
 @media(min-width:600px) and (max-width:900px)
-@media(min-width:901px)
+@media(min-width:901px) */
+
+.container {
+    background-color:rgb(240, 255, 255);
+    font-family: "Courier", monospace;
+    color: lightslategrey;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    padding: 30px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header header header header"
+                        "nav main main main "
+                        "nav cardOne cardTwo cardThree"
+                        "footer footer footer footer";
+}
+
+
+header {
+    color: black;
+    font-size: 40px;
+    grid-area: header;  
+}
+
+nav{
+    grid-area: nav;
+}
+
+a {
+    text-decoration: none; 
+ }
+
+.links a {
+    color: rgb(75, 161, 201);
+    font-size: 14px;
+}
+
+button {
+    color: rgb(75, 161, 201);
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid;
+    padding: 10px;
+    
+}
+button:hover {
+    color: white;
+    background-color: rgb(75, 161, 201);
+    cursor: all-scroll;
+}
+
+main {
+    grid-area: main;
+}
+ 
+.cardOne, 
+.cardTwo, 
+.cardThree {
+    background-color: gainsboro;
+    color: black;
+    padding: 10px;
+    font-size: 10px; 
+    border-radius: 6px;
+}
+.cardOne  {
+    grid-area: cardOne;
+ }
+
+ .cardTwo   {
+    grid-area: cardTwo; 
+ }
+   
+ .cardThree  { 
+    grid-area: cardThree;
+}
+    
+footer {
+    grid-area: footer;
+    background-color: grey;
+    color:white;
+    padding: 10px;
+    border-radius: 6px;
+
+
+
+ 
